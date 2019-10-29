@@ -16,17 +16,14 @@ module.exports = {
       warnings: true,
       errors: true
     },
-    open: true
+    open: true,
     // 开发环境代理
-    // proxy: {
-    //   '^/api': {
-    //     target: 'http://172.16.3.111:9190',
-    //     changeOrigin: true,
-    //     pathRewrite: {
-    //       '^/api': ''
-    //     }
-    //   }
-    // }
+    proxy: {
+      '^/api': {
+        target: process.env.VUE_APP_URL,
+        changeOrigin: true
+      }
+    }
   },
 
   // https://cli.vuejs.org/guide/webpack.html#simple-configuration
@@ -37,10 +34,20 @@ module.exports = {
         '@': resolve('src')
       }
     }
-  }
+  },
 
   // https://cli.vuejs.org/guide/webpack.html#chaining-advanced
   // 对内部的 webpack 配置进行更细粒度的修改。
-  // chainWebpack: config => {
-  // }
+  chainWebpack: config => {
+    const oneOfsMap = config.module.rule('scss').oneOfs.store
+    oneOfsMap.forEach(item => {
+      item
+        .use('sass-resources-loader')
+        .loader('sass-resources-loader')
+        .options({
+          resources: [resolve('src/assets/styles/_variables.scss')]
+        })
+        .end()
+    })
+  }
 }

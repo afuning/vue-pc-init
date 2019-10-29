@@ -6,10 +6,10 @@ import {
   // Dropdown,
   // DropdownMenu,
   // DropdownItem,
-  // Menu,
-  // Submenu,
-  // MenuItem,
-  // MenuItemGroup,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
   // Input,
   // InputNumber,
   // Radio,
@@ -22,7 +22,7 @@ import {
   // Select,
   // Option,
   // OptionGroup,
-  // Button,
+  Button,
   // ButtonGroup,
   // Table,
   // TableColumn,
@@ -59,10 +59,10 @@ import {
   // Cascader,
   // ColorPicker,
   // Transfer,
-  // Container,
-  // Header,
-  // Aside,
-  // Main,
+  Container,
+  Header,
+  Aside,
+  Main,
   // Footer,
   // Timeline,
   // TimelineItem,
@@ -80,6 +80,15 @@ import {
 } from 'element-ui'
 
 Vue.use(Pagination)
+  .use(Container)
+  .use(Header)
+  .use(Aside)
+  .use(Main)
+  .use(Button)
+  .use(Menu)
+  .use(Submenu)
+  .use(MenuItem)
+  .use(MenuItemGroup)
 
 Vue.use(Loading.directive)
 
