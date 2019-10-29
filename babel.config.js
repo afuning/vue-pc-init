@@ -4,10 +4,10 @@ module.exports = {
   ],
   plugins: [
     [
-      "component",
+      'component',
       {
-        libraryName: "element-ui",
-        styleLibraryName: "~src/theme/theme-#409EFF"
+        libraryName: 'element-ui',
+        styleLibraryName: '~src/theme/theme-#409EFF'
       }
     ]
   ]
