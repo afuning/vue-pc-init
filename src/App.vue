@@ -14,7 +14,7 @@ export default {
     HelloWorld
   },
   mounted () {
-    this.$message.success('成功');
+    this.$message.success('成功')
   }
 }
 </script>
