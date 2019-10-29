@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "release": "standard-version"
+    "release": "standard-version",
+    "update:iconfont": "node script/update-iconfont"
   },
   "dependencies": {
     "core-js": "^3.3.2",
