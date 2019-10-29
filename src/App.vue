@@ -15,7 +15,7 @@ export default {
   },
   mounted () {
     this.$message.success('成功')
-  }
+  },
 }
 </script>
 
