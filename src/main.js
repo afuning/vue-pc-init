@@ -1,12 +1,20 @@
 import Vue from 'vue'
+// element 组件
 import './element-ui/'
+// style
 import '@/assets/styles/basic.scss'
-import global from '@/plugins/global'
+// iconfont
+import '@/assets/iconfont/iconfont.css'
+import '@/assets/iconfont/iconfont.js'
+// 挂载Vue中插件
+import '@/plugins/index'
+// 过滤器
+import '@/filters/index'
+// 路由
 import router from '@/routers'
+// 入口
 import App from './App.vue'
 
-Vue.config.productionTip = false
-Vue.use(global)
 new Vue({
   router,
   render: h => h(App)

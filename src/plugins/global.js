@@ -10,7 +10,9 @@ export default {
         return ENUMS[k][v]
       }
     }
+    console.log(process.env)
     Vue.prototype.$emun = $emun
     Vue.prototype.$valid = validators
+    Vue.prototype.$env = process.env
   }
 }
