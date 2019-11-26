@@ -1,3 +1,9 @@
 body, html {
   background-color: $--global-bg;
 }
+//------快捷样式------
+.pagination {
+  padding: 12px 0;
+  background-color: $--color-white;
+  text-align: right;
+}

@@ -24,8 +24,8 @@ import {
   // OptionGroup,
   Button,
   // ButtonGroup,
-  // Table,
-  // TableColumn,
+  Table,
+  TableColumn,
   // DatePicker,
   // TimeSelect,
   // TimePicker,
@@ -89,6 +89,7 @@ Vue.use(Pagination)
   .use(Submenu)
   .use(MenuItem)
   .use(MenuItemGroup)
+  .use(Table).use(TableColumn)
 
 Vue.use(Loading.directive)
 

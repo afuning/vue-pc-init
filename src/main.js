@@ -12,10 +12,13 @@ import '@/plugins/index'
 import '@/filters/index'
 // 路由
 import router from '@/routers'
+// store
+import store from '@/store'
 // 入口
 import App from './App.vue'
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
